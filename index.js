@@ -11,13 +11,17 @@ const userInputs = require('prompt-sync')();
 
 
 const deposit = () => {
-  const depositAmount = userInputs('Enter a deposit amount: ');
-  const numberDepositAmount = parseFloat(depositAmount);
+  while (true) {
+    const depositAmount = userInputs('Enter a deposit amount: ');
+    const numberDepositAmount = parseFloat(depositAmount);
 
-  if (isNaN(numberDepositAmount) || numberDepositAmount <= 0) {
-    console.log('Invalid deposit amount, try again.');
+    //Che if the number is valid
+    if (isNaN(numberDepositAmount) || numberDepositAmount <= 0) {
+      console.log('Invalid deposit amount, try again.');
+    } else {
+      return numberDepositAmount;
+    }
   }
-
-  // return depositAmount;
 }
-deposit()
+const depositedAmount = deposit();
+console.log(depositedAmount);
