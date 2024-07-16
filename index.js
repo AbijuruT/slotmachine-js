@@ -45,7 +45,7 @@ const getBet = (balance, lines) => {
 
     //Che if the number is valid
     if (isNaN(numberOfBet) || numberOfBet <= 0 || numberOfBet > balance / lines) {
-      console.log('Invalid deposit amount, try again.');
+      console.log('Invalid bet, try again.');
     } else {
       return numberOfBet;
     }
