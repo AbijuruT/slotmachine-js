@@ -89,15 +89,14 @@ const spin = () => {
 };
 
 const transpose = (reels) => {
-  const rows = [];
-
+  const transposedRows = [];
   for (let i = 0; i < rows; i++) {
-    rows.push([]);
+    transposedRows.push([]);
     for (let j = 0; j < cols; j++) {
-      rows[i].push(reels[j][i])
+      transposedRows[i].push(reels[j][i]);
     }
   }
-  return rows;
+  return transposedRows;
 }
 
 let balance = deposit();
